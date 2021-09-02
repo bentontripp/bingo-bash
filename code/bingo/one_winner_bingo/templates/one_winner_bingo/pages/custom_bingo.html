@@ -1,0 +1,152 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>One-Winner BINGO</title>
+  <meta name="description" content="Custom BINGO cards with only one possible winner.">
+  <link rel="stylesheet" href={% static "CSS/styles.css" %}>
+
+</head>
+
+<body>
+  <!-- Content -->
+  <h1>Custom Text BINGO Cards</h1>
+  
+
+  <!-- Tables -->
+  <div class="tables">
+	<div class="t1">
+		<p id="tbl_caption1">Total Bingo Cards Needed:</p>
+		<table id="total_cards">
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id="card_input" type="text" maxlength="3"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="t2">
+		<p id="tbl_caption2">Custom Input</p>
+		</table>
+		<table id="tbl">
+			<col><col>
+			<tbody id='tbdy'>
+				<tr>
+					<td><div>1)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>2)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>3)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>4)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>5)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>6)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>7)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>8)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>9)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>10)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>11)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>12)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>13)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>14)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>15)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>16)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>17)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>18)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>19)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>20)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>21)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>22)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>23)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>
+				</tr>
+				<tr>
+					<td><div>24)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>          
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="buttons">
+		<button class="button Add" onclick="addField();" />Add</button>
+		<button class="button Remove" onclick="removeField();" />Remove</button>
+		<button class="button Submit" onclick="getCol();" />Submit</button>
+	</div>
+	<div class="end_links">
+		<a id="home_link" href="/">Home</a>
+	</div>
+  </div>
+  <script type="text/javascript" src={% static "JS/jquery-3.6.0.min.js" %}></script>
+  <script type="text/javascript" src={% static "JS/scripts.js" %}></script>
+  
+</body>
+</html>

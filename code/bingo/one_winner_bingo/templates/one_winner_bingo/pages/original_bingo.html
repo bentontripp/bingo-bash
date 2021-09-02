@@ -1,0 +1,43 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>One-Winner BINGO</title>
+  <meta name="description" content="Custom BINGO cards with only one possible winner.">
+  <link rel="stylesheet" href={% static "CSS/styles.css" %}>
+
+</head>
+
+<body>
+  <!-- Content -->
+  <h1>Classic BINGO Cards</h1>
+  <!-- Tables -->
+  <div class="tables">
+    <div class="t1">
+      <p id="tbl_caption1">Total Bingo Cards Needed:</p>
+      <table id="total_cards">
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input id="card_input" type="text" maxlength="3"/></td>
+        </tr>
+      </table>
+    </div>
+    <div class="buttons">
+      <button class="button Submit" onclick="getCol();" />Submit</button>
+    </div>
+    <div class="end_links">
+      <a id="home_link" href="/">Home</a>
+    </div>
+    </div>
+
+  <script type="text/javascript" src={% static "JS/jquery-3.6.0.min.js" %}></script>
+  <script type="text/javascript" src={% static "JS/scripts.js" %}></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>One-Winner BINGO</title>
+  <meta name="description" content="Custom BINGO cards with only one possible winner.">
+  <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+
+</head>
+
+<body>
+  <!-- Heading -->
+  <h1>Print Custom BINGO Cards</h2>
+  <h2>~ Only ONE possible Winner ~</h1>
+  
+  <!-- Buttons -->
+  <button class="button Original_Button" onclick="location.href='pages/original_bingo.html';">
+  Classic<br />BINGO Cards
+  </button>
+  <button class="button Custom_Button" onclick="location.href='pages/custom_bingo.html';">
+  Custom Text<br />BINGO Cards
+  </button>
+  
+  <p></p>
+  <!-- <script src="JS/scripts.js"></script> -->
+</body>
+</html>
+
