@@ -16,9 +16,12 @@ def original_bingo(request):
 def custom_bingo(request):
     return render(request, "one_winner_bingo/pages/custom_bingo.html")
 
+
+# from django.http import FileResponse
+# return FileResponse(buffer, as_attachment=True, filename='BINGO_CARDS.pdf')
+
 def get_custom_bingo(request):
     a = request.POST.getlist('arr[]')
-    print(type(a))
     arr_lis = app_models.custom_shuff(a, 150, True)
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="BINGO_CARDS.pdf"'
@@ -47,6 +50,7 @@ def get_custom_bingo(request):
     # write the document to disk
     doc.build(elements)
     response.write(buffer.getvalue())
+    print(buffer)
     buffer.close()
     return response
     
