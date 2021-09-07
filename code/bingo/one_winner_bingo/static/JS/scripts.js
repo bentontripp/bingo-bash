@@ -26,8 +26,13 @@ function getCol()
 	for(var i = 0; i<table.rows.length; i++){
 		column.push(table.rows[i].cells[1].childNodes[0].value);
 	}
-	alert(column);
-	return column;
+	alert(column)
+	$.ajax({
+		headers: {'X-CSRFToken': '{{ csrf_token }}'},
+		url: '/get_custom_bingo',
+		type: 'POST',
+		data: {'arr':column}
+	  });
 }
 
 function removeField()

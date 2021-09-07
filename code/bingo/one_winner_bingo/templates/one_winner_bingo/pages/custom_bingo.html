@@ -133,13 +133,20 @@
 					<td><div>24)</div></td>
 					<td><input id="input_row" type="text" maxlength="60"/></td>          
 				</tr>
+				<tr>
+					<td><div>25)</div></td>
+					<td><input id="input_row" type="text" maxlength="60"/></td>          
+				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div class="buttons">
 		<button class="button Add" onclick="addField();" />Add</button>
 		<button class="button Remove" onclick="removeField();" />Remove</button>
-		<button class="button Submit" onclick="getCol();" />Submit</button>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<button class="button Submit" onclick="getCol();" />Submit</button>
+		</form>
 	</div>
 	<div class="end_links">
 		<a id="home_link" href="/">Home</a>
