@@ -24,7 +24,7 @@ def get_custom_bingo(request):
     a = request.POST.getlist('arr[]')
     arr_lis = app_models.custom_shuff(a, 15, True)
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = f'attachment; filename="BINGO_CARDS.pdf"'
+    response['Content-Disposition'] = f'inline; filename="BINGO_CARDS.pdf"'
     buffer = io.BytesIO() 
     doc = SimpleDocTemplate(buffer, pagesize = letter)
     # container for the 'Flowable' objects
@@ -51,6 +51,7 @@ def get_custom_bingo(request):
     doc.build(elements)
     response.write(buffer.getvalue())
     buffer.close()
-    print(response)
     return response
+    # save response to pdf in directory
+    # return url to directory
     

@@ -31,9 +31,10 @@ function getCol()
         headers: {'X-CSRFToken': csrftoken},
         url: '/get_custom_bingo',
         type: 'POST',
-        data: {'arr':column}
+        data: {'arr':column},
+        success:function (response) {
+          alert(response)}
       });
-    alert(column)
 }
 
 function removeField()
