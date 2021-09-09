@@ -33,9 +33,11 @@ function getCol()
         type: 'POST',
         data: {'arr':column},
         success:function (response) {
-          alert(response)}
+          download(response, 'BINGO_CARDS.pdf', 'application/pdf' );
+          alert(response);
+        }
       });
-}
+};  
 
 function removeField()
 {

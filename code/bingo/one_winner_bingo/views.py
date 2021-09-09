@@ -17,14 +17,14 @@ def custom_bingo(request):
     return render(request, "one_winner_bingo/pages/custom_bingo.html")
 
 
-# from django.http import FileResponse
+from django.http import FileResponse
 # return FileResponse(buffer, as_attachment=True, filename='BINGO_CARDS.pdf')
 
 def get_custom_bingo(request):
     a = request.POST.getlist('arr[]')
     arr_lis = app_models.custom_shuff(a, 15, True)
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = f'inline; filename="BINGO_CARDS.pdf"'
+    response = HttpResponse(content_type = 'application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="BINGO_CARDS.pdf"'
     buffer = io.BytesIO() 
     doc = SimpleDocTemplate(buffer, pagesize = letter)
     # container for the 'Flowable' objects
