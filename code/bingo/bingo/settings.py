@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'one_winner_bingo.apps.OneWinnerBingoConfig'
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
