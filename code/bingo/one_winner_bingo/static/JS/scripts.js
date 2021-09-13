@@ -48,3 +48,8 @@ function removeField()
 		table.deleteRow(-1);
 	} 
 }
+
+function messagePopUp()
+{
+  alert('Test')
+}

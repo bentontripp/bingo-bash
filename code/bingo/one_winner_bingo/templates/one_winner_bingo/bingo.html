@@ -1,13 +1,5 @@
 {% load static %}
 
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-
 <!doctype html>
 
 <html lang="en">
@@ -22,6 +14,23 @@
 </head>
 
 <body>
+  {% if message1 %}
+    <div class="message" id="message1" title="Message 1">
+        <p>Please make sure there are no duplicate or blank entries.</p>
+    </div>
+  {% endif %}
+  {% if message2 %}
+    <div class="message" id="message2" title="Message 2">
+        <p>Please make sure the number of cards is a valid whole number between 2 and 150.</p>
+    </div>
+  {% endif %}
+
+  {% if message3 %}
+    <div class="message" id="message3" title="Message 3">
+        <p>There was a problem with your submission. Please douple check your entries, or try refreshing the page and starting over.</p>
+    </div>
+  {% endif %}
+
   <hr class="vline" />
 
   <!-- Custom -->

@@ -1,5 +1,6 @@
+from django.http.response import HttpResponseNotModified
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,  HttpResponseNotModified
 import io
 from one_winner_bingo import models as app_models
 from reportlab.lib import colors
@@ -18,16 +19,18 @@ def bingo(request):
 from django.contrib import messages
 
 def get_custom_bingo(request):
-    print(request.POST)
     a = request.POST.getlist('arr[]')
     cards = a[0]
     a = a[1:]
     if len(set(a)) < len(a):
-        messages.info(request, 'Please make sure there are no duplicate or blank entries.')
+        print('Error Code 1')
+        return render(request, 'one_winner_bingo/bingo.html', {'message1': True})
     elif '' in a:
-        messages.info(request, 'Please make sure there are no duplicate or blank entries.')
+        print('Error Code 1')
+        return render(request, 'one_winner_bingo/bingo.html', {'message1': True})
     elif cards < 2 or cards >= 150:
-        messages.info(request, 'Please make sure the number of cards is a valid whole number between 2 and 150.')
+        print('Error Code 2')
+        return render(request, 'one_winner_bingo/bingo.html', {'message2': True})
     else:
         try:
             arr_lis = app_models.custom_shuff(a, cards, True)
@@ -61,4 +64,5 @@ def get_custom_bingo(request):
             buffer.close()
             return response
         except:
-            messages.info(request, 'There was a problem with your submission./n/nPlease douple check your entries, or try refreshing the page and starting over.')
+            print('Error Code 3')
+            return render(request, 'one_winner_bingo/bingo.html', {'message3': True})
