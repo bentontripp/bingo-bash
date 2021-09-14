@@ -14,22 +14,30 @@
 </head>
 
 <body>
-  {% if message1 %}
-    <div class="message" id="message1" title="Message 1">
-        <p>Please make sure there are no duplicate or blank entries.</p>
-    </div>
-  {% endif %}
-  {% if message2 %}
-    <div class="message" id="message2" title="Message 2">
-        <p>Please make sure the number of cards is a valid whole number between 2 and 150.</p>
-    </div>
-  {% endif %}
 
-  {% if message3 %}
-    <div class="message" id="message3" title="Message 3">
-        <p>There was a problem with your submission. Please douple check your entries, or try refreshing the page and starting over.</p>
+  <div id="error1-Modal" class="modal">
+    <div id="error-1" class="error">
+      <span class="close">&times;</span>
+      <p>Error:</p>
+      <p>Please make sure there are no duplicate or blank entries and try again.</p>
     </div>
-  {% endif %}
+  </div>
+
+  <div id="error2-Modal" class="modal">
+    <div id="error-2" class="error">
+      <span class="close">&times;</span>
+      <p>Error:</p>
+      <p>Please make sure the number of cards is a valid whole number between 2 and 150 and try again.</p>
+    </div>
+  </div>
+  
+  <div id="error3-Modal" class="modal">
+    <div id="error-3" class="error">
+      <span class="close">&times;</span>
+      <p>Error:</p>
+      <p>There was a problem with your submission. Please douple check your entries, or try refreshing the page and starting over.</p>
+    </div>
+  </div>
 
   <hr class="vline" />
 
@@ -161,11 +169,11 @@
         </table>
       </div>
       <div class="buttons">
-        <button class="button Add" onclick="addField();" />Add</button>
-        <button class="button Remove" onclick="removeField();" />Remove</button>
+        <button class="button Add" id="b-add" onclick="addField();" />Add</button>
+        <button class="button Remove" id="b-rem" onclick="removeField();" />Remove</button>
         <form action="" method="POST">
           {% csrf_token %}
-          <a class="button Submit" onclick="getCol();" src="#"/>Submit</a>
+          <a class="button Submit" id="b-sub1" onclick="getCol();" src="#"/>Submit</a>
         </form>
       </div>
     </div>
@@ -175,7 +183,7 @@
   <h2 id="h2_2">One-Winner Bingo Cards</h2>
   <p id="d2">Description</p>
 
-  <div class="tables">
+  <div class="tables2">
     <div class="t1">
       <p id="tbl_caption1">Total Bingo Cards Needed:</p>
       <table id="total_cards">
@@ -188,8 +196,12 @@
           </tr>
         </table>
       </div>
+
       <div class="buttons">
-        <button class="button Submit" onclick="getCol();" />Submit</button>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <a class="button Submit" id="b-sub2" onclick="getCol_classic();" src="#"/>Submit</a>
+        </form>
       </div>
     </div>
   <!-- Buttons 

@@ -90,7 +90,6 @@ table tr td:first-child {
 
 .tables #tbl_caption1{
 	font-weight: bold;
-	font-size: 1.5vw;
 }
 
 .tables .t2 {
@@ -100,7 +99,6 @@ table tr td:first-child {
 
 .tables .t2 #tbl_caption2{
 	font-weight: bold;
-	font-size: 1.5vw;
 }
 
 #input_row {
@@ -123,25 +121,29 @@ table tr td:first-child {
 
 .tables2 .t1 #tbl_caption1{
 	font-weight: bold;
-	font-size: 1.5vw;
 }
 
-.button {
+#b-add{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	display: inline-block;
-	height: 1.6vw;
-	width: 5vw;
+	border-radius: 1px;
 	border-style: outset;
-	border-color: #636161;
+	border-color: #665652;
 	text-align: center;
 	font-size: 1vw;
+	font-weight: bold;
+	padding: 1%;
 	cursor: pointer;
-	margin: .3vw;
-	background-color: #c9c9c9;
+	margin: .1vw;
+	background-color: #4fa074;
 }
 
 .button:hover {
-	background-color: #ffffff;
-	font-weight: bold;
+	background-color: #9E443E;
+}
+
+.button #b-sub2 {
+	width: 50%;
 }
 
 /* The Modal (background) */

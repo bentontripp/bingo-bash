@@ -35,8 +35,60 @@ function getCol()
         type: 'POST',
         data: {'arr':column},
         success:function (response) {
-          download(response, 'BINGO_CARDS.pdf', 'application/pdf' );
-        }
+          if (response=='Error Code 1') {
+            var modal1 = document.getElementById("error1-Modal");
+            var span1 = document.getElementsByClassName("close")[0];
+            modal1.style.display = "block";
+            span1.onclick = function() {
+              modal1.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal1) {
+                modal1.style.display = "none";
+              }
+            }
+          }
+          else if (response=='Error Code 2') {
+            var modal2 = document.getElementById("error2-Modal");
+            var span2 = document.getElementsByClassName("close")[1];
+            modal2.style.display = "block";
+            span2.onclick = function() {
+              modal2.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal2) {
+                modal2.style.display = "none";
+              }
+            }
+          }
+          else if (response=='Error Code 3') {
+            var modal3 = document.getElementById("error3-Modal");
+            var span3 = document.getElementsByClassName("close")[2];
+            modal3.style.display = "block";
+            span3.onclick = function() {
+              modal3.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal3) {
+                modal3.style.display = "none";
+              }
+            }
+          }
+          else {download(response, 'BINGO_CARDS.pdf', 'application/pdf' );
+        }},
+        error:function () {
+          var modal4 = document.getElementById("error3-Modal");
+            var span4 = document.getElementsByClassName("close")[0];
+            modal4.style.display = "block";
+            span4.onclick = function() {
+              modal4.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal4) {
+                modal4.style.display = "none";
+              }
+            }
+          }
       });
 };  
 
@@ -49,7 +101,7 @@ function removeField()
 	} 
 }
 
-function messagePopUp()
+function getCol_classic()
 {
-  alert('Test')
+  alert('Classic');
 }
