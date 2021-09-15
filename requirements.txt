@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 alembic==1.6.5
-=======
->>>>>>> 17a0ac84818363ab388aa594e5615e8dde5651b3
 altair==4.1.0
 anyio==3.3.0
 argon2-cffi==20.1.0
