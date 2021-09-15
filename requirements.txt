@@ -1,4 +1,3 @@
-alembic @ file:///home/conda/feedstock_root/build_artifacts/alembic_1622150326904/work
 altair==4.1.0
 anyio @ file:///D:/bld/anyio_1626998785974/work/dist
 argon2-cffi @ file:///D:/bld/argon2-cffi_1605217264330/work
