@@ -50,7 +50,7 @@
   <div class="tables">
     <div class="t1">
       <p id="tbl_caption1">Total Bingo Cards Needed:</p>
-      <table id="total_cards">
+      <table id="total_cards1">
         <tr>
           <td></td>
         </tr>
@@ -186,24 +186,25 @@
   <div class="tables2">
     <div class="t1">
       <p id="tbl_caption1">Total Bingo Cards Needed:</p>
-      <table id="total_cards">
+      <table id="total_cards2">
         <tr>
+          <td></td>
           <td></td>
         </tr>
         <tr>
           <td></td>
           <td><input id="card_input" type="text" maxlength="3"/></td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="buttons">
-        <form action="" method="POST">
-          {% csrf_token %}
-          <a class="button Submit" id="b-sub2" onclick="getCol_classic();" src="#"/>Submit</a>
-        </form>
-      </div>
+        </tr>
+      </table>
     </div>
+
+    <div class="buttons">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <a class="button Submit" id="b-sub2" onclick="getCol_classic();" src="#"/>Submit</a>
+      </form>
+    </div>
+  </div>
   <!-- Buttons 
   <button class="button Original_Button" onclick="location.href='pages/original_bingo.html';">
   Classic<br />BINGO Cards
