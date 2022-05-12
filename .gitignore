@@ -1,2 +1,4 @@
-/.vscode
+.vscode/*
 bingo/__pycache__/*
+.git/*
+HTML/one_winner_bingo/__pycache__/*
